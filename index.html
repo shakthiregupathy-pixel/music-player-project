@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="player">
+    <h2 id="title">Song Title</h2>
+    <h3 id="artist">Artist</h3>
+
+    <audio id="audio"></audio>
+
+    <div class="progress-container" onclick="setProgress(event)">
+        <div id="progress"></div>
+    </div>
+
+    <div class="time">
+        <span id="currentTime">0:00</span>
+        <span id="duration">0:00</span>
+    </div>
+
+    <div class="controls">
+        <button onclick="prevSong()">⏮</button>
+        <button onclick="togglePlay()">▶️ / ⏸</button>
+        <button onclick="nextSong()">⏭</button>
+    </div>
+
+    <div class="volume">
+        <label>🔊</label>
+        <input type="range" min="0" max="1" step="0.01" onchange="setVolume(this.value)">
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
